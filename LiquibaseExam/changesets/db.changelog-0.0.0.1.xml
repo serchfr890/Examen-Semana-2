@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<databaseChangeLog 
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
-                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
     <!--<changeSet author="authorName" id="changelog-1.0">
         <createTable tableName="C_PRUEBA">
             <column name="ID" type="INT">
@@ -14,4 +12,28 @@
             </column>
         </createTable>
     </changeSet>-->
+
+    <changeSet author="sergio" id="20190228-01">
+        <createTable tableName="songs">
+            <column name="id_song" type="int">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="title" type="varchar(15)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="artist_id" type="int">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="album_id" type="int">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="genre_id" type="int">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="duration" type="time">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
 </databaseChangeLog> 
