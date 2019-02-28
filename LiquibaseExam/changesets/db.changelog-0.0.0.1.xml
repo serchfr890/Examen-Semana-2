@@ -107,5 +107,13 @@
         referencedTableName="albums"/>
     </changeSet>
 
+    <changeSet author="sergio" id="20190228-07">
+        <addForeignKeyConstraint 
+        baseColumnNames="artist_id" 
+        baseTableName="songs" 
+        constraintName="fk_artist" 
+        referencedColumnNames="artist_id" 
+        referencedTableName="artists"/>
+    </changeSet>
 
 </databaseChangeLog> 
