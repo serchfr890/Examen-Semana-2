@@ -78,7 +78,7 @@
 
     <changeSet author="sergio" id="20190228-04">
         <createTable tableName="genres">
-            <column name="gender_id" type="int">
+            <column name="genre_id" type="int">
                 <constraints nullable="true" primaryKey="true" unique="false"/>
             </column>
             <column name="tipe" type="varchar(15)">
@@ -114,6 +114,15 @@
         constraintName="fk_artist" 
         referencedColumnNames="artist_id" 
         referencedTableName="artists"/>
+    </changeSet>
+
+    <changeSet author="sergio" id="20190228-08">
+        <addForeignKeyConstraint 
+        baseColumnNames="genre_id" 
+        baseTableName="songs" 
+        constraintName="fk_genre" 
+        referencedColumnNames="genre_id" 
+        referencedTableName="genres"/>
     </changeSet>
 
 </databaseChangeLog> 
