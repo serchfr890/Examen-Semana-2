@@ -75,13 +75,24 @@
             </column>
         </createTable>
     </changeSet>
-    
+
     <changeSet author="sergio" id="20190228-04">
-        <createTable tableName="genders">
+        <createTable tableName="genres">
             <column name="gender_id" type="int">
                 <constraints nullable="true" primaryKey="true" unique="false"/>
             </column>
             <column name="tipe" type="varchar(15)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sergio" id="20190228-05">
+        <createTable tableName="collaborators">
+            <column name="album_id" type="int">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="artist_id" type="int">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
         </createTable>
