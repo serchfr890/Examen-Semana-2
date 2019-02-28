@@ -98,4 +98,14 @@
         </createTable>
     </changeSet>
 
+    <changeSet author="sergio" id="20190228-06">
+        <addForeignKeyConstraint 
+        baseColumnNames="album_id" 
+        baseTableName="songs" 
+        constraintName="fk_album" 
+        referencedColumnNames="album_id" 
+        referencedTableName="albums"/>
+    </changeSet>
+
+
 </databaseChangeLog> 
