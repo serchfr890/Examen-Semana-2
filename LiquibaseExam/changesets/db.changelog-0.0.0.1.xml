@@ -36,4 +36,27 @@
         </createTable>
     </changeSet>
 
+    <changeSet author="sergio" id="20190228-02">
+        <createTable tableName="albums">
+            <column name="album_id" type="int">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="name" type="varchar(15)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="album_number" type="int">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="cover_page" type="mediumblob">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="collaborators_id" type="int">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="release_date" type="datatime">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
 </databaseChangeLog> 
