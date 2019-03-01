@@ -120,9 +120,27 @@
         <addForeignKeyConstraint 
         baseColumnNames="genre_id" 
         baseTableName="songs" 
-        constraintName="fk_genre" 
+        constraintName="fk_genrer" 
         referencedColumnNames="genre_id" 
         referencedTableName="genres"/>
+    </changeSet>
+
+    <changeSet author="sergio" id="20190228-09">
+        <addForeignKeyConstraint 
+        baseColumnNames="album_id" 
+        baseTableName="collaborators" 
+        constraintName="fk_collaborators_album" 
+        referencedColumnNames="album_id" 
+        referencedTableName="albums"/>
+    </changeSet>
+
+    <changeSet author="sergio" id="20190228-10">
+        <addForeignKeyConstraint 
+        baseColumnNames="artist_id" 
+        baseTableName="collaborators" 
+        constraintName="fk_collaborators_artist" 
+        referencedColumnNames="artist_id" 
+        referencedTableName="artists"/>
     </changeSet>
 
 </databaseChangeLog> 
